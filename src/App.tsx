@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { loadTodo } from "./redux/actions";
+import Loader from "./components/loader/loader";
+import TextLoader from "./components/loader/loaderText";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import styled from 'styled-components';
+
+const TodoAddItem = React.lazy(() => import("./components/todo/todoAddItem"));
+const TodoList = React.lazy(() => import("./components/todo/todoList"));
+
+export const App = () =>  {
+  const dispatch = useDispatch();
+  const todos = useSelector((state: any) => state.todo.todos );
+  const loading = useSelector((state: any) => state.app.loading);
+  
+  useEffect(() => {
+    dispatch(loadTodo())
+  }, []);
+
+  return ( 
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <AppWrapper>
+          <Header>Todo List</Header>
+          <React.Suspense fallback="">
+            <TodoAddItem/>
+          </React.Suspense>
+          <React.Suspense fallback={<TextLoader />}>
+            {todos.length ? (
+              <TodoList/>
+            ) : loading ? null : (
+              <p>no data!</p>
+            )}
+          </React.Suspense>
+        </AppWrapper>
+      )}
+    </>
   );
 }
 
-export default App;
+const AppWrapper = styled.div`
+position: relative;
+width: 500px;
+background: #fff;
+`;
+
+const Header = styled.div`
+background: #03a9f4;
+color: #fff;
+padding: 10px 20px;
+font-weight: 600;
+font-size: 2rem;
+`
