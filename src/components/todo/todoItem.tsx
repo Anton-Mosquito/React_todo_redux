@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { connect, useDispatch } from 'react-redux';
 import { removeTodo, toggleTodo } from "../../redux/actions";
 import sprite from "../../assets/sprite.svg";
@@ -18,20 +18,28 @@ const TodoItem = ({ todo, index }: IProps) => {
   if (todo.completed) {
     classes.push("done");
   }
+
+  const addItem = useCallback((id) => {
+    dispatch(toggleTodo(id))
+  },[dispatch]);
+  
+  const remove = useCallback((id) => {
+    dispatch(removeTodo(id))
+  },[dispatch])
   
   return (
     <ListItem>
       <Label className={classes.join(" ")}>
         <Input
           type="checkbox"
-          onChange={() => {dispatch(toggleTodo(todo.id))}}
+          onChange={addItem.bind(null,todo.id)}
           checked={todo.completed}
         />
         <Checkbox></Checkbox>
         <NumberTodo>{index + 1}</NumberTodo>&emsp;
         {todo.title}
       </Label>
-      <Button onClick={() => dispatch(removeTodo(todo.id))}>
+      <Button onClick={remove.bind(null,todo.id)}>
         <svg width="15px" height="15px">
           <use href={sprite + "#close"}></use>
         </svg>

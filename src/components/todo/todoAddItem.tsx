@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, FormEventHandler, useState } from "react";
+import React, { ChangeEvent, FormEvent, FormEventHandler, useCallback, useState } from "react";
 import { connect, useDispatch } from 'react-redux';
 import { addTodo } from "../../redux/actions";
 import styled from 'styled-components';
@@ -7,14 +7,14 @@ const TodoAddItem = () => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
 
-  const submitHandler: FormEventHandler<HTMLFormElement> = (event: FormEvent) => {
+  const submitHandler: FormEventHandler<HTMLFormElement> = useCallback((event: FormEvent) => {
     event.preventDefault();
     if (value.trim()) {
       const newTodo = { title: value, id: Date.now(), completed: false }
       dispatch(addTodo(newTodo));
       setValue(" ");
     }
-  };
+  },[dispatch, value]);
 
   return (
     <Form action="" onSubmit={submitHandler}>

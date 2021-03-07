@@ -7,7 +7,7 @@ import { connect, useSelector } from 'react-redux'
 import { IFetchedTodo } from "../../models/response";
 
 
-const TodoList = ({asyncTodoItem}: any) => {
+const TodoList = ({asyncTodoItem} : any) => {
   // const todos = useSelector((state: any) => state.todo.todos ); 
   console.log(asyncTodoItem);
   return (
