@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.js": "/React_todo_redux/static/js/main.322762fc.chunk.js",
-    "main.js.map": "/React_todo_redux/static/js/main.322762fc.chunk.js.map",
-    "runtime-main.js": "/React_todo_redux/static/js/runtime-main.7d878ed9.js",
-    "runtime-main.js.map": "/React_todo_redux/static/js/runtime-main.7d878ed9.js.map",
-    "static/js/2.5f4b8e12.chunk.js": "/React_todo_redux/static/js/2.5f4b8e12.chunk.js",
-    "static/js/2.5f4b8e12.chunk.js.map": "/React_todo_redux/static/js/2.5f4b8e12.chunk.js.map",
-    "static/js/3.55dafa82.chunk.js": "/React_todo_redux/static/js/3.55dafa82.chunk.js",
-    "static/js/3.55dafa82.chunk.js.map": "/React_todo_redux/static/js/3.55dafa82.chunk.js.map",
-    "static/js/4.9096dc27.chunk.js": "/React_todo_redux/static/js/4.9096dc27.chunk.js",
-    "static/js/4.9096dc27.chunk.js.map": "/React_todo_redux/static/js/4.9096dc27.chunk.js.map",
-    "static/js/5.e30aaf3d.chunk.js": "/React_todo_redux/static/js/5.e30aaf3d.chunk.js",
-    "static/js/5.e30aaf3d.chunk.js.map": "/React_todo_redux/static/js/5.e30aaf3d.chunk.js.map",
+    "main.js": "/React_todo_redux/static/js/main.ca77fe2e.chunk.js",
+    "main.js.map": "/React_todo_redux/static/js/main.ca77fe2e.chunk.js.map",
+    "runtime-main.js": "/React_todo_redux/static/js/runtime-main.bfa1518e.js",
+    "runtime-main.js.map": "/React_todo_redux/static/js/runtime-main.bfa1518e.js.map",
+    "static/js/2.14590220.chunk.js": "/React_todo_redux/static/js/2.14590220.chunk.js",
+    "static/js/2.14590220.chunk.js.map": "/React_todo_redux/static/js/2.14590220.chunk.js.map",
+    "static/js/3.553bbbd3.chunk.js": "/React_todo_redux/static/js/3.553bbbd3.chunk.js",
+    "static/js/3.553bbbd3.chunk.js.map": "/React_todo_redux/static/js/3.553bbbd3.chunk.js.map",
+    "static/js/4.9a47d5c6.chunk.js": "/React_todo_redux/static/js/4.9a47d5c6.chunk.js",
+    "static/js/4.9a47d5c6.chunk.js.map": "/React_todo_redux/static/js/4.9a47d5c6.chunk.js.map",
+    "static/js/5.c316b3cd.chunk.js": "/React_todo_redux/static/js/5.c316b3cd.chunk.js",
+    "static/js/5.c316b3cd.chunk.js.map": "/React_todo_redux/static/js/5.c316b3cd.chunk.js.map",
     "index.html": "/React_todo_redux/index.html",
-    "static/js/2.5f4b8e12.chunk.js.LICENSE.txt": "/React_todo_redux/static/js/2.5f4b8e12.chunk.js.LICENSE.txt",
-    "static/media/sprite.bf710cac.svg": "/React_todo_redux/static/media/sprite.bf710cac.svg"
+    "static/js/2.14590220.chunk.js.LICENSE.txt": "/React_todo_redux/static/js/2.14590220.chunk.js.LICENSE.txt",
+    "static/media/sprite.svg": "/React_todo_redux/static/media/sprite.958f2268.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7d878ed9.js",
-    "static/js/2.5f4b8e12.chunk.js",
-    "static/js/main.322762fc.chunk.js"
+    "static/js/runtime-main.bfa1518e.js",
+    "static/js/2.14590220.chunk.js",
+    "static/js/main.ca77fe2e.chunk.js"
   ]
 }
