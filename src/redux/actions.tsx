@@ -36,7 +36,7 @@ export const hideLoader = (): TodoActionTypes => {
 }
 
 export const loadTodo = () => {
-    return async (dispatch: ThunkDispatch<{}, {}, TodoActionTypes>):Promise<void> => {
+    return async (dispatch: ThunkDispatch<Record<string, unknown>, Record<string, unknown>, TodoActionTypes>):Promise<void> => {
         dispatch(showLoader());
         const response = await fetch("https://jsonplaceholder.typicode.com/todos?_limit=5");
         const json = await response.json();

@@ -1,15 +1,16 @@
+import { IFetchedTodo } from '../models/response';
 import { ITodo } from '../models/state';
 import { ADD_TODO, DELETE_TODO, TOGGLE_TODO, FETCHED_TODO, TodoActionTypes } from './types';
 
 export interface IinitialState {
-    todos: Array<ITodo>
+    todos: Array<ITodo | IFetchedTodo>
 }
 
 const initialState: IinitialState = {
     todos: []
 };
 
-export const todoReducer = (state = initialState, action: TodoActionTypes) => {
+export const todoReducer = (state = initialState, action: TodoActionTypes): IinitialState => {
     switch (action.type) {
         case ADD_TODO:
             return {

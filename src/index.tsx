@@ -4,16 +4,12 @@ import { App } from './App';
 import reportWebVitals from './reportWebVitals';
 import WebFont from "webfontloader";
 
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-
-import { compose, createStore, applyMiddleware, Store } from 'redux';
+import { compose, createStore, applyMiddleware } from 'redux';
 import { rootReducer } from './redux/rootReducer';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import { TodoActionTypes } from './redux/types';
-import { ITodo } from './models/state';
-import { IinitialState } from './redux/todoReducer';
 
 WebFont.load({
   google: {
@@ -60,7 +56,6 @@ body {
   text-size-adjust: 100%;
   font-family: 'Oswald', sans-serif;
   margin: 0;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

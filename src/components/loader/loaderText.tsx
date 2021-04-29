@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from 'styled-components';
 
-export default () => {
+export const TextLoader: React.FC = () => {
   return (
     <Wrapper>
       <Container>

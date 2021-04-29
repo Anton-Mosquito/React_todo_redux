@@ -8,7 +8,7 @@ const initialState: IinitialState = {
     loading: false
 }
 
-export const appReducer = (state = initialState, action: TodoActionTypes) => {
+export const appReducer = (state = initialState, action: TodoActionTypes): IinitialState => {
     switch (action.type) {
         case SHOW_LOADER:
         return {
